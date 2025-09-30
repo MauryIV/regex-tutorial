@@ -25,11 +25,11 @@ Anchors are used to set up the position of the syntax you are looking for. In my
 
 ### Quantifiers
 
-Quantifiers are used to indicate how much you are wanting returned. In my example of ^[\w\.\+\*\?\^\$\/,!#&'-=~]+@\w+\.\w{2,6}$ quantifiers are used 3 times. 2 instances of a + indicating 1 or more and {2,6} indicating anywhere from 2 to 6 characters long. Some other quantifiers are \* indicating 0 or more, ? indicating 0 or one (this is good if you wanted it to be something like "colou?r" to be able to find both variations of spelling), then there is {x} for a specific amount, or {x,} for a specified amount or more.
+Quantifiers are used to indicate how much you are wanting returned. In my example of ^[\w\.\+\*\?\^\$\/,!#&'-=~]+@\w+\.\w{2,6}$ quantifiers are used 3 times. 2 instances of a + indicating 1 or more and {2,6} indicating anywhere from 2 to 6 characters long. Some other quantifiers are \* indicating 0 or more, ? indicating 0 or one (this is good if you wanted it to be something like "colou?r" to be able to find both variations of spelling), then there is {x} (x being a numeric variable) for a specific amount, or {x,} for a specified amount or more.
 
 ### Grouping Constructs
 
-Grouping Constructs are used signified by parenthesis "()". This is used to group things together you want to. I do not have any in my example because it's not entirely necessary in this example. But it would work if they were in there like such ^([\w\.\+\*\?\^\$\/,!#&'-=~])@(\w+)\.(\w{2,6})$. This can help you understand each section as well, so feel free to use it even if not necessary.
+Grouping Constructs are used signified by parenthesis "()". This is used to group things together you want to. I do not have any in my example because it's not entirely necessary in this example. But it would still work if they were in there like such, ^([\w\.\+\*\?\^\$\/,!#&'-=~])@(\w+)\.(\w{2,6})$. This can help you understand each section as well, so feel free to use it even if not necessary.
 
 ### Bracket Expressions
 
@@ -45,11 +45,11 @@ The OR Operator is extremely useful as well. A good example for this would be if
 
 ### Flags
 
-Flags are used "outside" of the regex expression. I say outside because they're used in JavaScript on the end of the last forward slash. Some flags being g, for global (matching all occurences). Or i, for case insensitive (ignores case when searching). With my example being ^[\w\.\+\*\?\^\$\/,!#&'-=\~]+@\w+\.\w{2,6}$, in JS with a flag for global and case insensitive, it would be written as follows const regexEmail = /^[\w\.\+\*\?\^\$\/,!#&'-=\~]+@\w+\.\w{2,6}$/gi;.
+Flags are used "outside" of the regex. I say outside because they're used in JavaScript on the end of the last forward slash. Some flags being g, for global (matching all occurences). Or i, for case insensitive (ignores case when searching). With my example being ^[\w\.\+\*\?\^\$\/,!#&'-=\~]+@\w+\.\w{2,6}$, in JS with a flag for global and case insensitive, it would be written as follows const regexEmail = /^[\w\.\+\*\?\^\$\/,!#&'-=\~]+@\w+\.\w{2,6}$/gi;.
 
 ### Character Escapes
 
-Character Escapes are extremely useful and necessary for regex. In my example they are used multiple times and are represented with the backslash "\". ^[\w\.\+\*\?\^\$\/,!#&'-=~]+@\w+\.\w{2,6}$ with the first section wanting to be inclusive of multiple possible symbols within an email, the backslash is used to represent that literal character. It is also used for character classes, but you will notice the character classes will have a letter after, where if we want to use the backslash for a character escape, there is a symbol following the backslash.
+Character Escapes are extremely useful and necessary for regex. In my example they are used multiple times and are represented with the a backslash. ^[\w\.\+\*\?\^\$\/,!#&'-=~]+@\w+\.\w{2,6}$ with the first section wanting to be inclusive of multiple possible symbols within an email, the backslash is used to represent that literal character. It is also used for character classes, but you will notice the character classes will have a letter after, where if we want to use the backslash for a character escape, there is a symbol following the backslash. An example of this would look like \\*.
 
 ## Author
 
