@@ -45,7 +45,7 @@ The OR Operator is extremely useful as well. A good example for this would be if
 
 ### Flags
 
-Flags are used "outside" of the regex expression. I say outside because they're used in JavaScript on the end of the last forward slash. Some flags being g, for global (matching all occurences). Or i, for case insensitive (ignores case when searching). With my example being ^[\w\.\+\*\?\^\$\/,!#&'-=~]+@\w+\.\w{2,6}$, in JS with a flag for global and case insensitive, it would be written as follows const regexEmail = /^[\w\.\+\*\?\^\$\/,!#&'-=~]+@\w+\.\w{2,6}$/gi;.
+Flags are used "outside" of the regex expression. I say outside because they're used in JavaScript on the end of the last forward slash. Some flags being g, for global (matching all occurences). Or i, for case insensitive (ignores case when searching). With my example being ^[\w\.\+\*\?\^\$\/,!#&'-=\~]+@\w+\.\w{2,6}$, in JS with a flag for global and case insensitive, it would be written as follows const regexEmail = /^[\w\.\+\*\?\^\$\/,!#&'-=\~]+@\w+\.\w{2,6}$/gi;.
 
 ### Character Escapes
 
